@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proveedores de Ropa</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .categoria {
+            margin-top: 20px;
+        }
+        .proveedor {
+            margin-left: 20px;
+        }
+        .boton {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Proveedores de Ropa</h1>
+    <div class="categoria" id="ropaDeportiva">
+        <h2>Ropa Deportiva</h2>
+        <ul>
+            <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
+            <!-- Agrega más proveedores según sea necesario -->
+        </ul>
+    </div>
+    <div class="categoria" id="ropaBebe">
+        <h2>Ropa de Bebé</h2>
+        <ul>
+            <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
+            <!-- Agrega más proveedores según sea necesario -->
+        </ul>
+    </div>
+    <div class="categoria" id="ropaNinos">
+        <h2>Ropa de Niños</h2>
+        <ul>
+            <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
+            <!-- Agrega más proveedores según sea necesario -->
+        </ul>
+    </div>
+    <div class="categoria" id="ropaMujer">
+        <h2>Ropa de Mujer</h2>
+        <ul>
+            <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
+            <!-- Agrega más proveedores según sea necesario -->
+        </ul>
+    </div>
+    <div class="categoria" id="frasadas">
+        <h2>Frásadas</h2>
+        <ul>
+            <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
+            <!-- Agrega más proveedores según sea necesario -->
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript para mostrar/ocultar las categorías al hacer clic
+        document.getElementById('ropaDeportiva').style.display = 'none';
+        document.getElementById('ropaBebe').style.display = 'none';
+        document.getElementById('ropaNinos').style.display = 'none';
+        document.getElementById('ropaMujer').style.display = 'none';
+        document.getElementById('frasadas').style.display = 'none';
+
+        function toggleCategoria(categoria) {
+            var elemento = document.getElementById(categoria);
+            if (elemento.style.display === 'none') {
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
