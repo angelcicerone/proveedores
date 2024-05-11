@@ -6,8 +6,8 @@
     <title>Lista de Proveedores de Ropa</title>
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             font-family: Arial, sans-serif;
         }
         .categoria {
@@ -19,60 +19,52 @@
         .boton {
             margin-left: 10px;
         }
+        .proveedor-lista {
+            display: none;
+            margin-left: 40px;
+        }
     </style>
 </head>
 <body>
     <h1>Lista de Proveedores de Ropa</h1>
-    <div class="categoria" id="ropaDeportiva">
+    <div class="categoria" onclick="mostrarProveedor('ropaDeportiva')">
         <h2>Ropa Deportiva</h2>
-        <ul>
+        <ul class="proveedor-lista" id="ropaDeportiva">
             <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
-            <!-- Agrega más proveedores según sea necesario -->
         </ul>
     </div>
-    <div class="categoria" id="ropaBebe">
+    <div class="categoria" onclick="mostrarProveedor('ropaBebe')">
         <h2>Ropa de Bebé</h2>
-        <ul>
+        <ul class="proveedor-lista" id="ropaBebe">
             <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
-            <!-- Agrega más proveedores según sea necesario -->
         </ul>
     </div>
-    <div class="categoria" id="ropaNinos">
+    <div class="categoria" onclick="mostrarProveedor('ropaNinos')">
         <h2>Ropa de Niños</h2>
-        <ul>
+        <ul class="proveedor-lista" id="ropaNinos">
             <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
-            <!-- Agrega más proveedores según sea necesario -->
         </ul>
     </div>
-    <div class="categoria" id="ropaMujer">
+    <div class="categoria" onclick="mostrarProveedor('ropaMujer')">
         <h2>Ropa de Mujer</h2>
-        <ul>
+        <ul class="proveedor-lista" id="ropaMujer">
             <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
-            <!-- Agrega más proveedores según sea necesario -->
         </ul>
     </div>
-    <div class="categoria" id="frasadas">
+    <div class="categoria" onclick="mostrarProveedor('frasadas')">
         <h2>Frásadas</h2>
-        <ul>
+        <ul class="proveedor-lista" id="frasadas">
             <li class="proveedor">Proveedor 1 <button class="boton">WhatsApp</button> <button class="boton">Catálogo</button></li>
-            <!-- Agrega más proveedores según sea necesario -->
         </ul>
     </div>
 
     <script>
-        // JavaScript para mostrar/ocultar las categorías al hacer clic
-        document.getElementById('ropaDeportiva').style.display = 'none';
-        document.getElementById('ropaBebe').style.display = 'none';
-        document.getElementById('ropaNinos').style.display = 'none';
-        document.getElementById('ropaMujer').style.display = 'none';
-        document.getElementById('frasadas').style.display = 'none';
-
-        function toggleCategoria(categoria) {
-            var elemento = document.getElementById(categoria);
-            if (elemento.style.display === 'none') {
-                elemento.style.display = 'block';
+        function mostrarProveedor(categoria) {
+            var lista = document.getElementById(categoria);
+            if (lista.style.display === 'none') {
+                lista.style.display = 'block';
             } else {
-                elemento.style.display = 'none';
+                lista.style.display = 'none';
             }
         }
     </script>
